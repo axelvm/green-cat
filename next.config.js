@@ -2,13 +2,19 @@
 const nextConfig = {
   reactStrictMode: true,
   async headers() {
-    return [
-      {
-        "Access-Control-Allow-Methods":
-          "GET, POST, OPTIONS, PUT, PATCH, DELETE",
-        "Access-Control-Allow-Origin": "*",
-      },
-    ];
+    return {
+      source: "*",
+      headers: [
+        {
+          key: "Access-Control-Allow-Methods",
+          value: "GET, POST, OPTIONS, PUT, PATCH, DELETE",
+        },
+        {
+          key: "Access-Control-Allow-Origin",
+          value: "*",
+        },
+      ],
+    };
   },
 };
 
