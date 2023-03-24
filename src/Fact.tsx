@@ -1,4 +1,5 @@
 import React from "react"
+import styles from '@/styles/Fact.module.css'
 
 export default function Fact() {
 const [fact, setFact] = React.useState("")
@@ -14,7 +15,7 @@ React.useEffect(() => {
 
   return (
     <>
-		<div>
+		<div className={styles.fact}>
 			fact: {fact}
 		</div>
     </>
